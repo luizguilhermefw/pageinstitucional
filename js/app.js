@@ -13,9 +13,11 @@ app.component('header-component', {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#endereco">Endereço</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">SOBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#area-atuacao">ÁREAS DE ATUAÇÃO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#endereco">ENDEREÇO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">CONTATO</a></li>
                     </ul>
                 </div>
             </div>

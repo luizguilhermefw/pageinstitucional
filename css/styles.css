@@ -1,11 +1,23 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   color: black;
+  line-height: 16px; 
   background-color: black;
   height: 100vh;
   background-size: cover;
 }
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
 
 
 /* Estilo para o hero */
@@ -31,10 +43,11 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem; 
+  font-size: 5rem; 
   font-weight: 600; 
-  line-height: 1.2; 
+  line-height: 1.1; 
   margin-bottom: 20px; 
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .hero h1 span {
@@ -43,20 +56,57 @@ body {
 
 .hero p {
   font-size: 1.5rem; 
-  margin-bottom: 30px; 
+  margin-bottom: 120px; 
 }
 
 .hero .btn {
-  padding: 25px 35px;
-  font-size: 1.7rem;
+  padding: 15px 35px;
+  font-size: 2rem;
   display: inline-block;
   margin: 0 auto;
-  background-color: #000; /* Preto */
+  background-color: #000; 
   color: #fff; 
   border: none; 
-  border-radius: 25px; /* Arredonda as bordas */
+  border-radius: 25px;
   background-image: linear-gradient(to bottom, #000, #222);
+  position: relative; 
   box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; 
+}
+
+/* Efeito de luz ao redor do botão */
+.hero .btn::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 45px rgba(255, 255, 255, 0.3);
+  z-index: 1; 
+  animation: pulse-light 2s infinite; 
+  pointer-events: none; 
+}
+
+/* Animação para o efeito de luz */
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 45px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 45px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 45px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.hero .btn:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); 
 }
 
 
@@ -90,14 +140,15 @@ section {
 /* Estilo para os links no menu */
 .navbar-nav .nav-item .nav-link {
   color: white; 
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   margin-right: 20px;
-  transition: color 0.3s ease; 
+  transition: color 0.5s ease; 
 }
 
 /* Muda a cor do link ao passar o mouse */
 .navbar-nav .nav-item .nav-link:hover {
-  color: #f8f9fa; 
+  color: rgba(255, 255, 255, 0.9); 
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Ajuste para quando a página for rolada */
@@ -110,5 +161,5 @@ section {
   width: auto;   
   max-width: 100%;
   object-fit: contain; 
-  border-radius: 5%;
+  border-radius: 10px;
 }
